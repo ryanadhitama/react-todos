@@ -8,8 +8,8 @@ class App extends React.Component {
       todos       : [],
       title       : '',
       description : '',
-      edit        : false,
-      data_key    : ''
+      data_key    : '',
+      edit        : false
     }
   }
 
