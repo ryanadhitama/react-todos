@@ -94,29 +94,33 @@ class App extends React.Component {
         <h3>Todo</h3>
         <hr/>
         <form className="form-inline">
-          <input 
-                type="text" 
-                className="form-control" 
-                placeholder="title"
-                name="title"
-                onChange={this.handleChange}
-                value={this.state.title}
-          /> 
-
-          <input 
-                type="text" 
-                className="form-control ml-2" 
-                placeholder="description"
-                name="description"
-                onChange={this.handleChange}
-                value={this.state.description}
-          /> 
-          
-          <button type="button" className="btn btn-success ml-2" onClick={this.save.bind(this)}>
-            {
-              (this.state.edit === true) ? 'save' : 'add'
-            }
-          </button>
+          <div className="form-group">
+            <input 
+                  type="text" 
+                  className="form-control" 
+                  placeholder="title"
+                  name="title"
+                  onChange={this.handleChange}
+                  value={this.state.title}
+            /> 
+          </div>
+          <div className="form-group">
+            <input 
+                  type="text" 
+                  className="form-control ml-2 mr-2" 
+                  placeholder="description"
+                  name="description"
+                  onChange={this.handleChange}
+                  value={this.state.description}
+            /> 
+          </div>
+          <div className="form-group">
+            <button type="button" className="btn btn-success" onClick={this.save.bind(this)}>
+              {
+                (this.state.edit === true) ? 'save' : 'add'
+              }
+            </button>
+          </div>
         </form>
         <hr/>
         {
